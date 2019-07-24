@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>高中OI竞赛中STL的使用总结 · Dylan Li&#39;s Blog</title>
+    <title>Targan学习 · Dylan Li&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Dylan Li&#39;s Blog.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">高中OI竞赛中STL的使用总结</a>
+                <a href="#" class="post-name">Targan学习</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            高中OI竞赛中STL的使用总结
+            Targan学习
             <!-- 404 -->
             
         </h1>
@@ -266,12 +266,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">847</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">30</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/07/21</span>
+                    <span class="post-intro-time">2019/07/22</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -395,52 +395,10 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="高中STL"><a href="#高中STL" class="headerlink" title="高中STL"></a>高中STL</h1><h2 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h2><h5 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h5><p>序列容器 - 有序集</p>
-<blockquote>
-<p>vector 变长数组</p>
-</blockquote>
-<p>关联容器 - 无序集</p>
-<blockquote>
-<p>set 不重复元素的集合。</p>
-<p>multiset 跟 set 具有相同功能，但允许重复的元素。</p>
-<p>map 关联数组，每个元素含有两个数据项，map 将一个数据项映射到另一个数据项中。</p>
-</blockquote>
-<p>容器适配器</p>
-<blockquote>
-<p>queue 队列</p>
-<p>priority_queue 优先队列</p>
-<p>stack 栈</p>
-</blockquote>
-<h5 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h5><blockquote>
-<p>binary_search 二分查找，返回值为bool，找到为真，否则为假。</p>
-<p>upper_bound(A+1,A+n+1,v) 在有序序列A上查找大于v的第一个元素的地址。</p>
-<p>lower_bound(A+1,A+n+1,v) 在有序序列A上查找大于等于v的第一个元素的地址。</p>
-<p>next_permutation 全排列生成。</p>
-<p>sort 对给定区间所有元素进行排序。</p>
-<p>swap(a,b) 交换a和b。</p>
-<p>unique 去除相邻的重复元素（一般需要先排序），该函数把重复的元素移到后面去了，然后依然保存到了原数组中，然后返回去重后最后一个元素的地址。</p>
-</blockquote>
-<h2 id="List-STL"><a href="#List-STL" class="headerlink" title="List STL"></a>List STL</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt;L; <span class="comment">//申请</span></span><br><span class="line"><span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line"><span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt;::iterator it=L.begin();<span class="comment">//迭代器</span></span><br><span class="line">L.insert(it,number);<span class="comment">//插入至迭代器位置</span></span><br><span class="line">it = L.erase(it);<span class="comment">//删除迭代器位置;注意前面要写等号</span></span><br><span class="line"></span><br><span class="line">a.front(), a.back();<span class="comment">//访问头尾元素--与vector不同</span></span><br><span class="line">a.push_front(<span class="number">6</span>); a.push_back(<span class="number">6</span>);<span class="comment">//头尾添加</span></span><br><span class="line">a.pop_front(); a.pop_back();<span class="comment">//头尾删除</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p>•元素不可重复</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line">a.insert(<span class="number">6</span>); <span class="comment">//(如果重复则不会插入)</span></span><br><span class="line">a.erase(<span class="number">6</span>);<span class="comment">//删除</span></span><br><span class="line">a.count(<span class="number">6</span>) <span class="comment">//元素个数(返回0/1)</span></span><br><span class="line"></span><br><span class="line">查找：a.find(<span class="number">6</span>)</span><br><span class="line">a.lower_bound(<span class="number">6</span>);<span class="comment">// 第一个不小于6的元素</span></span><br><span class="line">a.upper_bound(<span class="number">6</span>) ;<span class="comment">//第一个大于6的元素</span></span><br><span class="line">查找返回指向该元素的迭代器；找不到则返回a.end()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><blockquote>
-<p>The map that leads to you<del>Ain’t nothing I can do</del></p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; a;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Que-and-priority-queue"><a href="#Que-and-priority-queue" class="headerlink" title="Que and priority_queue"></a>Que and priority_queue</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; que;</span><br><span class="line">priority_queue &lt;<span class="keyword">int</span>&gt; pque;</span><br><span class="line">q.empty(); q.size(); q.pop();<span class="comment">//(删除队首元素)</span></span><br><span class="line">q.front(); q.back();</span><br><span class="line">q.top();<span class="comment">//返回具有最高优先级的元素的值，但不删除该元素（仅适用于优先队列）</span></span><br><span class="line">q.push();<span class="comment">//对queue，在队尾压入一个新元素;对于priority_queue,在基于优先级的适当位置插入新元素</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Stack-STL"><a href="#Stack-STL" class="headerlink" title="Stack STL"></a>Stack STL</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt;s;</span><br><span class="line"></span><br><span class="line">s.push(a[i]); <span class="comment">//入栈</span></span><br><span class="line"></span><br><span class="line">s.pop();<span class="comment">//出栈</span></span><br><span class="line"></span><br><span class="line">s.size();<span class="comment">//栈中元素个数</span></span><br><span class="line"></span><br><span class="line">s.top();<span class="comment">//栈顶元素</span></span><br><span class="line"></span><br><span class="line">s.empty();<span class="comment">//空-返回0, 非空-返回1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Victor-STL"><a href="#Victor-STL" class="headerlink" title="Victor STL"></a>Victor STL</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a;<span class="comment">//定义空的(长度为0)vector</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(<span class="number">10</span>);<span class="comment">//在定义时指定初始长度</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rec</span>&#123;</span><span class="keyword">int</span> a; <span class="keyword">double</span> b;&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;rec&gt; a;<span class="comment">//&lt;datatype&gt;可以为任何类型</span></span><br><span class="line"></span><br><span class="line">a[<span class="number">3</span>];<span class="comment">//访问元素：(注意下标从0开始)</span></span><br><span class="line">a.push_back(number);<span class="comment">//尾端插入</span></span><br><span class="line">a.pop_back();<span class="comment">//尾端删除</span></span><br><span class="line">a.size();<span class="comment">//元素个数</span></span><br><span class="line">a.empty();<span class="comment">//是否为空</span></span><br><span class="line">a.clear();<span class="comment">//全部删除</span></span><br><span class="line">a.resize(<span class="number">100</span>);<span class="comment">//改变大小</span></span><br></pre></td></tr></table></figure>
-
-<p>迭代器用法</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输出vector&lt;int&gt; a的所有元素</span></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator i = a.begin(); i != a.end(); ++i)</span><br><span class="line">    <span class="built_in">printf</span>(“%d\n”, *i)</span><br><span class="line"><span class="comment">//end()迭代器指向最后一个元素的下一个位置</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(“value”)</span></span>;<span class="comment">//将s初始化为”value”</span></span><br><span class="line">getline(<span class="built_in">cin</span>,s); <span class="comment">//读入句子(遇到空格不结束)</span></span><br><span class="line">s.empty();</span><br><span class="line">s.size()</span><br><span class="line">s1+s2;<span class="comment">//连接s1,s2,返回新串</span></span><br><span class="line">v1==v2;<span class="comment">//比较v1与v2 的内容，相等则返回true ,否则返回false</span></span><br><span class="line">s.insert(pos,s2);<span class="comment">//在s下标为pos的元素前插入string类型s2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//从字符串读入数字</span></span><br><span class="line"><span class="built_in">sscanf</span>(s1.c_str(),<span class="string">"%d"</span>,&amp;a); <span class="comment">//sscanf()的作用是从字符数组中读入</span></span><br></pre></td></tr></table></figure>
-
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>dfn[i] ：i号点为被访问到的第几个点</li>
+<li>low[i]：返回到的dfs中的最早的点</li>
+</ul>
 
     </article>
     <!-- license  -->
@@ -449,17 +407,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/07/21/扫描线法-CityGame题解(预定完成)/" title= "扫描线法&CityGame题解">
-                    <div class="nextTitle">扫描线法&CityGame题解</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/07/21/高考学习讲座/" title= "高考学习讲座">
-                    <div class="prevTitle">高考学习讲座</div>
+                <a href= "/2019/07/21/拓朴排序/" title= "拓朴排序">
+                    <div class="prevTitle">拓朴排序</div>
                 </a>
             
         </li>
@@ -568,7 +521,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#高中STL"><span class="toc-number">1.</span> <span class="toc-text">高中STL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Content"><span class="toc-number">1.1.</span> <span class="toc-text">Content</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#容器"><span class="toc-number">1.1.0.0.1.</span> <span class="toc-text">容器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#算法"><span class="toc-number">1.1.0.0.2.</span> <span class="toc-text">算法</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#List-STL"><span class="toc-number">1.2.</span> <span class="toc-text">List STL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set"><span class="toc-number">1.3.</span> <span class="toc-text">Set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map"><span class="toc-number">1.4.</span> <span class="toc-text">Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Que-and-priority-queue"><span class="toc-number">1.5.</span> <span class="toc-text">Que and priority_queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stack-STL"><span class="toc-number">1.6.</span> <span class="toc-text">Stack STL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Victor-STL"><span class="toc-number">1.7.</span> <span class="toc-text">Victor STL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#string"><span class="toc-number">1.8.</span> <span class="toc-text">string</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
