@@ -11,7 +11,10 @@
   <entry>
     <title><![CDATA[数据结构]]></title>
     <url>%2F2019%2F09%2F24%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[0-conclusion数据结构大概分为以下几个板块（1）差分，前缀和（2）树状数组（3）st表（4）树链剖分（5）倍增LCA（6）线段树 1-树状数组（1）树状数组基础用处：1.单点修改，区间查询2.区间修改，单点查询（利用差分，改为1类问题）用 法：]]></content>
+      <tags>
+        <tag>NOIPlearning</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[DPlearning]]></title>
